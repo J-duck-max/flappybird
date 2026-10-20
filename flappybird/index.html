@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flappy Bird - A beautiful browser-based clone of the classic game">
+    <title>Flappy Bird</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-wrapper">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Start Screen Overlay -->
+        <div id="start-screen" class="overlay">
+            <div class="overlay-content">
+                <h1 id="game-title">Flappy Bird</h1>
+                <div class="bird-icon">🐦</div>
+                <p class="subtitle">Tap or press <kbd>Space</kbd> to fly!</p>
+                <button id="start-btn" class="btn-play">▶ Play</button>
+            </div>
+        </div>
+
+        <!-- Game Over Overlay -->
+        <div id="gameover-screen" class="overlay hidden">
+            <div class="overlay-content gameover">
+                <h2 id="gameover-title">Game Over</h2>
+                <div class="score-panel">
+                    <div class="score-row">
+                        <span class="score-label">Score</span>
+                        <span id="final-score" class="score-value">0</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="score-row">
+                        <span class="score-label">Best</span>
+                        <span id="best-score" class="score-value">0</span>
+                    </div>
+                </div>
+                <div id="medal-container" class="medal hidden">
+                    <span id="medal-icon"></span>
+                    <span id="medal-text"></span>
+                </div>
+                <button id="retry-btn" class="btn-play">↻ Retry</button>
+            </div>
+        </div>
+
+        <!-- HUD -->
+        <div id="hud" class="hidden">
+            <span id="score-display">0</span>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
